@@ -1,0 +1,23 @@
+<div class="container bodyWidthHeight">
+    <header>
+        <div class="headerclass">
+            <span>Welcome to the sample World</span>
+        </div>
+    </header>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+    <footer class="footer footerclass" >
+            <div class="container-fluid">
+            <div class="row">
+            <div class="col-md-6 pad0 height100 footertext">
+                <span class="divmiddlefooter">footer</span>
+            </div>
+            <div class="col-md-6 pad0  clickme height100" >
+                <button class="btn-primary divmiddle">Click Me!</button>
+            </div>
+        </div>
+       </div>
+    </footer>
+    <simple-notifications [options]="notificationOptions" ></simple-notifications>
+</div>

@@ -1,0 +1,83 @@
+.bodyWidthHeight{
+    width:400px;
+    height: 600px;
+    padding: 0;
+}
+.headerclass{
+    height:100px;
+background-color: red;
+
+}
+.headerclass span{
+min-height: 100px;
+display: inline-flex;
+align-items: center;
+}
+body{
+    text-align: center;
+}
+.footerclass{
+    height:100px;
+    width:400px;
+background-color: blue;
+
+
+color:white;
+font-size: 18px;
+}
+.verticalcenter{
+    min-height: 100px;
+    display: inline-flex;
+    align-items: center;
+}
+.pad0{padding:0px;}
+
+.floatleft{
+    float:left;
+    
+}
+.clickme{padding-right:25px !important;text-align:right;}
+
+.floatright{
+    padding-right:25px;text-align:right;
+    
+}
+.height100{height:100px;padding:0px;margin:0px;}
+.divmiddle{position: relative;
+    top: 50%;
+       transform: translateY(-50%);}
+    .footertext{text-align:left;padding-left:15px;}
+    .divmiddlefooter{position: relative;
+        top: 35%;
+           transform: translateY(-35%);}
+           .scrollablediv{
+               border:1px solid black;
+               height: 50px;
+            overflow-y: auto;
+           }
+           .scrollablediv  li a:focus{
+               background-color: #ffcc00;
+
+           }
+           .scrollablediv  li a:link {
+            background-color: red;
+        }
+        
+        /* visited link */
+        .scrollablediv  li  a:visited {
+            background-color: green;
+        }
+        
+        /* mouse over link */
+        .scrollablediv  li a:hover {
+            background-color: hotpink;
+        }
+        
+        /* selected link */
+        .scrollablediv  li a:active {
+            background-color: blue;
+          
+        }
+        
+
+        

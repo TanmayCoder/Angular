@@ -1,0 +1,74 @@
+<div class="panel-primary">
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+    <div class="panel-body">
+
+        <form #form="ngForm" name="SampleForm" novalidate>
+            <div class='form-group row'>
+                <div class='col-md-4'>Name:</div>
+                <div class='col-md-8'>
+
+                    <div [ngClass]="{'has-error': !Name.valid }">
+                        <input type='text' class="form-control" name='name' [(ngModel)]='model.Name' #Name='ngModel' required maxlength="50" />
+
+                        <div *ngIf="Name.errors && (Name.dirty || Name.touched)" class="alert alert-danger">
+                            <div [hidden]="!Name.errors.required">
+                                Name is required
+                            </div>
+
+                            <div [hidden]="!Name.errors.maxlength">
+                                Name cannot be more than 50 characters long.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class='form-group row'>
+                <div class='col-md-4'>Age:</div>
+                <div class='col-md-8'>
+
+                    <div [ngClass]="{'has-error': !Age.valid }">
+                        <input type="text" class="form-control" name="Age" numericinput valueChecker numericRegex [(ngModel)]="model.Age" #Age="ngModel"
+                            required />
+
+                        <div *ngIf="Age.errors && (Age.dirty || Age.touched)" class="alert alert-danger">
+                            <div [hidden]="!Age.errors.required">
+                                Age is required
+                            </div>
+
+                            <div [hidden]="!Age.errors.numericRegex">
+                                Value should be numeric and having not more than 2 decimal values.
+                            </div>
+                            <div [hidden]="!Age.errors.valueChecker">
+                                Value should be between 0 and 10000.
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class='form-group row'>
+                <div class="col-md-6">
+                    <div class="scrollablediv">
+                        <ul style="list-style: none;">
+                            <li *ngFor="let item of httpCallList">
+                                <a  (click)="onItemClicked(item)">{{item}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary" (click)="submitAction()">Submit</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
